@@ -475,8 +475,6 @@ h6 {
   margin-right: 30px;
   margin-bottom: 30px;
   position: relative;
-
-  
 }
 .project-link {
   display: block;
@@ -618,8 +616,8 @@ h6 {
   height: 20px;
 }
 .social-link-footer:focus,
-.social-link-footer:hover{
-  background-color: var(--accent-color)
+.social-link-footer:hover {
+  background-color: var(--accent-color);
 }
 .footer-contact:hover,
 .footer-contact:focus {
@@ -665,11 +663,212 @@ h6 {
   color: var(--black);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  /*transition*/
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal-close:hover,
+.modal-close:focus {
+  color: var(--accent-color);
+}
+
 .modal-close-img {
   height: 11px;
   width: 11px;
-  color: currentColor;
+  fill: currentColor;
+}
+.modal-title {
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
+}
+.modal-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px;
+  width: 100%;
+}
+
+.modal-title {
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
+}
+.modal-label {
+  display: contents;
+  position: relative;
+  margin: 0;
+  margin-bottom: 10px;
+  outline: #000000;
+}
+.modal-text {
+  display: block;
+  position: relative;
+  margin: 0;
+  margin-right: auto;
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.166;
+  /* identical to box height */
+  letter-spacing: 0.01em;
+  color: var(--grey-accent);
+}
+.input-div {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 0;
+}
+.comment-div {
+  margin-bottom: 20px;
+}
+.checkbox-div {
+  margin-bottom: 30px;
+  justify-content: flex-start;
+}
+
+.input-modal {
+  display: block;
+  position: relative;
+  padding: 0;
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 42px;
+
+  /*transition*/
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input-modal:hover,
+.input-modal:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.modal-input-icon {
+  position: absolute;
+  bottom: 14px;
+  left: 13.5px;
+  fill: currentColor;
+
+  /*transition*/
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input-div:hover .modal-input-icon {
+  fill: var(--accent-color);
+}
+.comment-input-modal {
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  /*transition*/
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.comment-input-modal:hover,
+.comment-input-modal:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.submit-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  background-color: var(--accent-color);
+  border: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 0;
+
+  color: var(--white-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  /* identical to box height, or 188% */
+  letter-spacing: 0.06em;
+  /*transition*/
+  transition-property: background;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.submit-modal:hover,
+.submit-modal:focus {
+  background: #188ce8;
+}
+
+.checkbox-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.checkbox-icon {
+  width: 16px;
+  height: 15px;
+  border: var(--primary-text-color) 2px solid;
+  border-radius: 4px;
+  margin-right: 8.5px;
+  /*transition*/
+  transition-property: background background-color border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.licence-imput {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+.licence-imput:checked + .checkbox-icon {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  background-image: url("../images/icons/checked.svg");
+  background-repeat: no-repeat;
+  background-origin: content-box;
+}
+.licence-label {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+  letter-spacing: 0.03em;
+
+  color: var(--grey-accent);
+}
+.licence-link {
+  display: flex;
+  text-decoration-line: underline;
+  color: var(--accent-color);
+  margin-left: 3px;
 }
 
 /*форма подписки*/
@@ -682,7 +881,7 @@ h6 {
   margin-top: 20px;
   width: 570px;
 }
-.subscribe-label {
+.footer-subscribe {
   display: flex;
 }
 .email-input {
@@ -690,11 +889,11 @@ h6 {
   height: 50px;
   margin-right: 12px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-border-radius: 4px;
-background: transparent;
-padding-left: 16px;
-color: var(--white-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background: transparent;
+  padding-left: 16px;
+  color: var(--white-color);
 }
 .email-send {
   display: flex;
@@ -702,19 +901,19 @@ color: var(--white-color);
   height: 50px;
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-border-radius: 4px;
-border: var(--accent-color);
-color: var(--white-color);
-fill: currentColor;
+  border-radius: 4px;
+  border: var(--accent-color);
+  color: var(--white-color);
+  fill: currentColor;
 
-font-weight: 700;
-font-size: 16px;
-line-height: 1.875;
-/* identical to box height, or 188% */
-align-items: center;
-justify-content: center;
-letter-spacing: 0.06em;
-padding: 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  /* identical to box height, or 188% */
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.06em;
+  padding: 0;
 }
 .email-icon-send {
   margin-left: 10px;
